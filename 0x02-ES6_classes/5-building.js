@@ -1,31 +1,21 @@
 #!/usr/bin/node
 
-export default class Building {
+class Building {
   constructor(sqft) {
-    // if (new.target === Building) {
-    //   throw new Error(
-    //     `Building is an abstract class and cannot be instaniated directly`,
-    //   );
-    // }
-    this.sqft = sqft;
-    this.evacuationWarningMessage();
+    if (
+      new.target !== Building
+      && this.evacuationWarningMessage === undefined
+    ) {
+      throw new Error(
+        'Class extending Building must override evacuationWarningMessage',
+      );
+    }
+    this._sqft = sqft;
   }
 
   get sqft() {
     return this._sqft;
   }
-
-  set sqft(value) {
-    if (typeof value === 'number') {
-      this._sqft = value;
-    } else {
-      throw new TypeError('Sqft must be a number');
-    }
-  }
-
-  evacuationWarningMessage() {
-    if (this.constructor.name !== 'Building') {
-      throw new Error('evacuationWarningMessage method must be implemented');
-    }
-  }
 }
+
+export default Building;

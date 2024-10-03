@@ -3,7 +3,6 @@
         "version": "1.0.0",
         "description": "Unittests in Node with Mocha-Chai",
         "main": "0-calcul.js",
-        "type": "module",
         "scripts": {
                 "test": "mocha"
         },

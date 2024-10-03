@@ -9,4 +9,4 @@
  */
 const calculateNumber = (a, b) => Math.round(a) + Math.round(b);
 
-export default calculateNumber;
+module.exports = calculateNumber;

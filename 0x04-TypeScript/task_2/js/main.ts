@@ -1,12 +1,59 @@
+/**
+ * This file contains the interfaces and classes for different types of employees.
+ * The interfaces define the methods that each employee should have.
+ * The classes implement these interfaces and provide the functionality for each employee type.
+ *
+ * @author [Your Name] <[your.email@example.com]>
+ * @version 1.0.0
+ * @license [License Name]
+ */
+
 interface DirectorInterface {
+  /**
+   * Defines the behavior of working from home.
+   *
+   * @return {string} The message indicating that the director is working from home.
+   */
   workFromHome(): string;
+
+  /**
+   * Defines the behavior of getting a coffee break.
+   *
+   * @return {string} The message indicating that the director is getting a coffee break.
+   */
   getCoffeeBreak(): string;
+
+  /**
+   * Defines the behavior of working on director tasks.
+   *
+   * @return {string} The message indicating that the director is working on director tasks.
+   */
   workDirectorTasks(): string;
 }
 
+/**
+ * Interface for a teacher.
+ */
 interface TeacherInterface {
+  /**
+   * Defines the behavior of working from home.
+   *
+   * @return {string} The message indicating that the teacher is working from home.
+   */
   workFromHome(): string;
+
+  /**
+   * Defines the behavior of getting a coffee break.
+   *
+   * @return {string} The message indicating that the teacher is getting a coffee break.
+   */
   getCoffeeBreak(): string;
+
+  /**
+   * Defines the behavior of working on teacher tasks.
+   *
+   * @return {string} The message indicating that the teacher is working on teacher tasks.
+   */
   workTeacherTasks(): string;
 }
 
